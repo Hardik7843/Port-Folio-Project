@@ -31,7 +31,6 @@ body{
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
-    opacity: 0;
     animation: slideRight 1s ease forwards;
 }
 
@@ -42,7 +41,6 @@ body{
     font-weight: 500;
     margin-left: 35px;
     transition: .3s;
-    opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: calc(.2s *var(--i));
 
@@ -50,8 +48,8 @@ body{
 
 .navbar a:hover,
 .navbar a.active{
-    color: rgb(51, 116, 116);
-
+    color: rgb(59, 199, 199);
+    
 }
 
 .home{
@@ -66,21 +64,101 @@ body{
 
 .home-content{
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    height: 500px;
 }
 
-.social-media{
+.home-img img {
+    max-width: 450px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight:700;
+}
+
+.home-content h3 {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.home-content p {
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.multiple-text {
+    color: rgb(59, 199, 199);
+}
+
+.btn {
+    font-size: medium;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
     background-color: transparent;
+    color :  rgb(59, 199, 199);
+    border: solid rgb(59, 199, 199);;
+    width: 200px;
+    height:40px;
+    border-radius: 25px;
+    padding: 0.5rem;
+    margin-top: .5rem;
 }
 
-.bx {
-    border: lightblue solid;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    align-content: center;
-    padding: 10px;
-    box-shadow: inset;
-    color: lightblue;
+.social-media {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    animation: inward 0.5s 1.5s ease-in-out forwards;
+}
+
+.social-media a{
+    text-align: center;
+    background-color: transparent;
+    color :  rgb(59, 199, 199);
+    border: solid rgb(59, 199, 199);;
+    width: 60px;
+    height:60px;
+    padding: 1rem;
+    /* transition: 0.3s; */
+    
+    box-shadow:5px 5px 10px  rgb(59, 199, 199);
+}
+
+.social-icon {
+    border: solid white;
+    width: 20px;
+    height:20px;
+    padding : 2px;
+}
+
+.social-icon:hover {
+    box-shadow:5px 0px 15px rgb(59, 199, 199);
+}
+
+.btn:hover {
+    width: 200px;
+    height:45px;
+    padding-top: 0.7rem;
+    box-shadow:5px 5px 20px  rgb(59, 199, 199) ;
 }
 
 
+@keyframes inward {
+    0% {
+        transform: translateX(-100px);
+    }
+    90% {
+        transform: translateX(20px);
+    }
+
+    100%{
+        transform: translateX(2px);
+    }
+}
